@@ -25,9 +25,9 @@
     "monolog/monolog"             : "~1.18"
   },
   "suggest"    : {
-    "timiki/vizzle-service"   : "For bundles services",
-    "timiki/vizzle-task"      : "For bundles tasks",
-    "timiki/rpc-server-bundle": "For bundles RPC methods"
+    "timiki/vizzle-service-bundle": "For bundles services",
+    "timiki/vizzle-task-bundle"   : "For bundles tasks",
+    "timiki/rpc-server-bundle"    : "For bundles RPC methods"
   },
   "autoload"   : {
     "psr-4": {
