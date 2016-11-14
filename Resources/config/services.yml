@@ -1,0 +1,7 @@
+services:
+
+    # Vizzle loger handler
+    monolog.handler.vizzle:
+        class: Vizzle\VizzleBundle\Logger\Handler
+        calls:
+            - [setContainer, ['@service_container']]
