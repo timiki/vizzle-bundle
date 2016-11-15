@@ -55,7 +55,7 @@ class WebService implements ContainerAwareInterface
      */
     public function getStopCmd()
     {
-        $cmd = ' server:stop ' . $this->container->getParameter('vizzle.server_web.path');
+        $cmd = ' server:stop ' . $this->container->getParameter('vizzle.web.path');
 
         // Is debug
         if ($this->container->get('kernel')->isDebug()) {
@@ -70,7 +70,7 @@ class WebService implements ContainerAwareInterface
      */
     public function getStartCmd()
     {
-        $cmd = ' server:start ' . $this->container->getParameter('vizzle.server_web.path');
+        $cmd = ' server:start ' . $this->container->getParameter('vizzle.web.path');
 
         // Is debug
         if ($this->container->get('kernel')->isDebug()) {
@@ -85,8 +85,8 @@ class WebService implements ContainerAwareInterface
      */
     public function isEnabled()
     {
-        if ($this->container->hasParameter('vizzle.server_web.enabled')) {
-            return (boolean)$this->container->getParameter('vizzle.server_web.enabled');
+        if ($this->container->hasParameter('vizzle.web.enabled')) {
+            return (boolean)$this->container->getParameter('vizzle.web.enabled');
         }
 
         return true;

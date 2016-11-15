@@ -79,16 +79,4 @@ class MonitoringService implements ContainerAwareInterface
 
         $qb->getQuery()->execute();
     }
-
-    /**
-     * Is server monitoring enabled
-     */
-    public function isEnabled()
-    {
-        if ($this->container->hasParameter('vizzle.server_monitoring.enabled')) {
-            return (boolean)$this->container->getParameter('vizzle.server_monitoring.enabled');
-        }
-
-        return true;
-    }
 }

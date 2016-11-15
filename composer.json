@@ -22,7 +22,7 @@
     "symfony/console"             : "~3.0",
     "symfony/framework-bundle"    : "~3.0",
     "symfony/process"             : "~3.0",
-    "monolog/monolog"             : "~1.18"
+    "symfony/serializer"          : "~3.0"
   },
   "suggest"    : {
     "timiki/vizzle-service-bundle": "For bundles services",
