@@ -34,11 +34,12 @@ class WebService implements ContainerAwareInterface
      */
     public function onStart()
     {
-        $cmd = 'php ' . $this->container->get('kernel')->getConsoleCmd() . $this->getStopCmd();
-        $this->processUtils->runBackground($cmd);
-
-        $cmd = 'php ' . $this->container->get('kernel')->getConsoleCmd() . $this->getStartCmd();
-        $this->processUtils->runBackground($cmd);
+        $this->processUtils->runBackground(
+            'php ' . $this->container->get('kernel')->getConsoleCmd() . $this->getStopCmd()
+        );
+        $this->processUtils->runBackground(
+            'php ' . $this->container->get('kernel')->getConsoleCmd() . $this->getStartCmd()
+        );
     }
 
     /**
@@ -46,8 +47,9 @@ class WebService implements ContainerAwareInterface
      */
     public function onStop()
     {
-        $cmd = 'php ' . $this->container->get('kernel')->getConsoleCmd() . $this->getStopCmd();
-        $this->processUtils->runBackground($cmd);
+        $this->processUtils->runBackground(
+            'php ' . $this->container->get('kernel')->getConsoleCmd() . $this->getStopCmd()
+        );
     }
 
     /**
